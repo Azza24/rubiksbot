@@ -540,9 +540,9 @@ for key in x.keys():
         edge[pos[0]] = vals[0]
         edge[pos[1]] = vals[1]
 
-        print(key + ": " + str(val))
+        print(key + ": " + str(val) + ", "+ str(comp) + ", "+ str(pos)+ ", " + str(vals))
 
 print(edge)
 
-# Current problem (I think): Only reads out the first 4 edges (Yellow) Then gives error
+# Current problem (I think): something goes wrong in W7. W1,3,5 are read correctly but not stored in array edge
 # All positions have been checked and are now correct.
