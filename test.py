@@ -1,11 +1,4 @@
-# ''
-# _map['y'][3]['r']['g']
-# _map[array][index][value][
-
-# comp = pos_map['y'][3]['comp']
-# _map['y'][3][ values['y'][3] ][ values[comp][1] ]
-
-values = {
+values = { # current rubiks cube test state
     'y': ['b', 'w', 'o', 'g', 'g', 'o', 'o', 'o'],
     'g': ['w', 'y', 'o', 'w', 'r', 'r', 'g', 'r'],
     'r': ['y', 'w', 'g', 'b', 'y', 'g', 'w', 'g'],
@@ -550,3 +543,6 @@ for key in x.keys():
         print(key + ": " + str(val))
 
 print(edge)
+
+# Current problem (I think): Only reads out the first 4 edges (Yellow) Then gives error
+# All positions have been checked and are now correct.
