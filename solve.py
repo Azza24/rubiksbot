@@ -8,6 +8,7 @@ def printMoves(argument):
         2: "Switch", # Yellow red (2, 3)
         3: "L, U', F, U, Switch, U', F', U, L'", # Red yellow (3, 2)
         4: "Imma do this tomorrow lel",
+        5: "some moves here",
         6: "R2, R, R2, Switch, R2, R' R2", # Yellow green (6, 7)
     }
     print(switcher.get(argument))

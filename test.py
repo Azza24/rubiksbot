@@ -544,5 +544,5 @@ for key in x.keys():
 
 print(edge)
 
-# Current problem (I think): something goes wrong in W7. W1,3,5 are read correctly but not stored in array edge
+# Current problem (I think): something goes wrong in W7. W1,3,5 are read correctly but not stored in array edge.
 # All positions have been checked and are now correct.
