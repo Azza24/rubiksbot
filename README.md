@@ -21,5 +21,5 @@ Numbersequence: `20143` \
 The sequence to solve this set is: switch with position 2 then 1 then 3, 4 and finally 3.
 
 ## Development Progress
-Currently writing the sorting code. Was able to sort the edges but pairity became a problem.
+Currently writing the sorting/input code. Was able to sort the edges but pairity became a problem.
 Also changed the input method to look at faces instead of pieces.
