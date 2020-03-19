@@ -13,7 +13,7 @@ Position 0 is the buffer. The number in the position is read, and switched with 
 
 ### Example:
 Number sequence: 20143
-20143 -> 10243 -> 01243 -> 41203 -> 31204 -> 01234
+`` 20143 -> 10243 -> 01243 -> 41203 -> 31204 -> 01234 ``
 The sequence to solve this set is: switch with position 2 then 1 then 3, 4 and finally 3.
 
 ## Development Progress
