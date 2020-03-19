@@ -3,18 +3,17 @@ edge = [22, 23, 17, 16, 21, 20, 19, 18, 4, 5, 12, 13, 9, 8, 14, 15, 1, 0, 11, 10
 
 cor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 #edge = [23, 22, 17, 16, 20, 21, 1, 0, 12, 13, 6, 7, 5, 4, 2, 3, 9, 8, 19, 18, 14, 15, 11, 10]
-corner = [14, ]
+corner = [20, 19, 18, 17, 16, 15, 14, 13, 12, ]
 
 def printMoves(argument):
     switcher = {
-        0: "Nothing?",                                  # Yellow Orange (0, 1) Solved
-        1: "M' U M' U M' U M' U2 M' U M' U M' U M'",    # Orange Yellow (1, 0)
+        1: "U, L U L F' L' F U' L' R' U' R' F R F' U R U'",  # Orange Yellow (1, 0)
         2: "Switch",                                    # Yellow Red (2, 3)
         3: "L, U', F, U, Switch, U', F', U, L'",        # Red Yellow (3, 2)
         4: "R2, U', R2, Switch, R2, U, R2",             # Yellow Blue (4, 5)
         5: "R', B, L, R, Switch, R', L', B', R",        # Blue Yellow (5, 4)
         6: "R2, R, R2, Switch, R2, R' R2",              # Yellow Green (6, 7)
-        7: "F' L', Switch, L, F",                       # Green Yellow (7, 6)
+        7: "U', F', U, L', Switch, L, U', F, U",        # Green Yellow (7, 6)
         8: "U2, R', U2, Switch, U2, R U2",              # Blue Orange (8, 9)
         9: "U, B, U', Switch, U, B', U'",               # Orange Blue (9, 8)
         10: "U', F' U, Switch, U', F, U",               # Orange Green (10, 11)
