@@ -29,3 +29,41 @@ def printMoves(argument):
         23: "U', F, U, L', Switch, L, U', F', U"        # Green White (23, 22)
     }
     print(switcher.get(argument))
+
+solved = 0
+
+while solved == 0:
+    if edge[0] == 0: # if buffer == 0
+       for x in range(24):
+           if cor[x] != edge[x]:
+               tmp = edge[x]
+               edge[0] = edge[x]
+               edge[x] = tmp
+
+
+    switchPos = 0
+    found = 0
+
+    while found == 0: # Look for position to be switched with
+        if edge[0] == cor[switchPos]:
+            found = 1
+        else:
+            switchPos = switchPos + 2
+
+    # Switch
+    printMoves(switchPos)
+    tmp = edge[0]
+    edge[0] = edge[switchPos]
+    edge[switchPos] = tmp
+
+    # Check if solved
+    solvedtmp = 1
+    for x in range(24):
+        if cor[x] != edge[x]:
+            solvedtmp = 0
+
+    if solvedtmp == 1:
+        solved = 1
+
+
+
