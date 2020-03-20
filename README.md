@@ -1,9 +1,9 @@
 # Rubik's cube solving bot
 In this project I will try to eventually make a robot that:
 
-Scans the cube
-Output a sequence that will solve the cube
-Preform the sequence of moves
+- Scans the cube
+- Output a sequence that will solve the cube
+- Preform the sequence of moves
 This project however is still in development stage.
 
 ## Solving Methods
