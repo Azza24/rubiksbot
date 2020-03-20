@@ -1,10 +1,12 @@
+# New scramble R2 U D2 R' D2 U2 L R D2 F2 R F2 L' D2 B' F2 U F' R' U
+
 values = { # current rubiks cube test state
-    'y': ['b', 'w', 'o', 'g', 'g', 'o', 'o', 'o'],
-    'g': ['w', 'y', 'o', 'w', 'r', 'r', 'g', 'r'],
-    'r': ['y', 'w', 'g', 'b', 'y', 'g', 'w', 'g'],
-    'o': ['y', 'w', 'w', 'b', 'y', 'g', 'g', 'r'],
-    'b': ['b', 'b', 'r', 'o', 'r', 'y', 'b', 'o'],
-    'w': ['r', 'y', 'w', 'r', 'o', 'b', 'b', 'y'],
+    'y': ['w', 'b', 'r', 'w', 'o', 'r', 'o', 'o'],
+    'g': ['b', 'w', 'g', 'r', 'b', 'y', 'y', 'o'],
+    'r': ['b', 'w', 'w', 'b', 'b', 'o', 'g', 'r'],
+    'o': ['w', 'g', 'w', 'y', 'y', 'y', 'o', 'g'],
+    'b': ['g', 'w', 'r', 'b', 'y', 'g', 'o', 'b'],
+    'w': ['r', 'r', 'y', 'o', 'g', 'y', 'r', 'g'],
 }
 
 x = {
@@ -278,6 +280,7 @@ val_map = {
                 'r': (2, 3),
                 'b': (4, 5),
                 'g': (6, 7),
+                'w': (40, 40),
             },
             'o': {
                 'y': (1, 0),
@@ -320,6 +323,12 @@ val_map = {
                 'b': (4, 5),
                 'g': (6, 7),
             },
+            'w': {
+                'o': (16, 17),
+                'r': (18, 19),
+                'b': (20, 21),
+                'g': (22, 23),
+            },
             'o': {
                 'y': (1, 0),
                 'b': (9, 8),
@@ -344,12 +353,6 @@ val_map = {
                 'w': (21, 20),
                 'o': (8, 9),
             },
-            'w': {
-                'o': (16, 17),
-                'r': (18, 19),
-                'b': (20, 21),
-                'g': (22, 23),
-            },
         }
     },
 
@@ -363,6 +366,7 @@ val_map = {
                 'r': (2, 3),
                 'b': (4, 5),
                 'g': (6, 7),
+                'w': (30, 30),
             },
             'o': {
                 'y': (1, 0),
@@ -536,7 +540,6 @@ for key in x.keys():
         comp = val_map[key][val]['comp']
         pos = val_map[key][val]['pos']
         vals = val_map[key][val][values[key][val]][values[comp][1]]
-
         edge[pos[0]] = vals[0]
         edge[pos[1]] = vals[1]
 
@@ -544,5 +547,3 @@ for key in x.keys():
 
 print(edge)
 
-# Current problem (I think): something goes wrong in W7. W1,3,5 are read correctly but not stored in array edge.
-# All positions have been checked and are now correct.
