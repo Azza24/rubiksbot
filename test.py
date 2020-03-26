@@ -1,5 +1,9 @@
 # New scramble R2 U D2 R' D2 U2 L R D2 F2 R F2 L' D2 B' F2 U F' R' U
 
+# OLD INPUT METHOD DO NOT USE
+# USE TEST2 INSTEAD
+
+
 values = { # current rubiks cube test state
     'y': ['w', 'b', 'r', 'w', 'o', 'r', 'o', 'o'],
     'g': ['b', 'w', 'g', 'r', 'b', 'y', 'y', 'o'],
