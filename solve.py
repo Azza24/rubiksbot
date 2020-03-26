@@ -2,7 +2,7 @@
 edge = [22, 23, 17, 16, 21, 20, 19, 18, 5, 4, 12, 13, 9, 8, 14, 15, 1, 0, 11, 10, 6, 7, 3, 2]
 
 cor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-corner = [20, 19, 18, 17, 16, 15, 14, 13, 12, ]
+corner = [20, 19, 18, 16, 15, 17, 14, 13, 12, 21, 23, 22, 5, 3, 4, 0, 1, 2, 10, 11, 8, 6, 0, 7]
 
 def printMoves(argument):
     switcher = {
@@ -98,4 +98,14 @@ while solvedEdge == 0:
 
 # Solving Corners
 
+solvedCorner = 0
 
+while solvedCorner == 0:
+   switchPos = 0
+   found = 0
+
+    while found == 0:  # look for position to be switched with
+        if edge[0] == cor[switchpos]:
+            found = 1
+        else:
+            switchpos += 2
