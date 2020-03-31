@@ -1,9 +1,9 @@
-Y = ['w', 'b', 'r', 'w', 'o', 'r', 'o', 'o']
-G = ['b', 'w', 'g', 'r', 'b', 'y', 'y', 'o']
-O = ['w', 'g', 'w', 'y', 'y', 'y', 'o', 'g']
-R = ['b', 'w', 'w', 'b', 'b', 'o', 'g', 'r']
-B = ['g', 'w', 'r', 'b', 'y', 'g', 'o', 'b']
-W = ['r', 'r', 'y', 'o', 'g', 'y', 'r', 'g']
+#Y = ['w', 'b', 'r', 'w', 'o', 'r', 'o', 'o']
+#G = ['b', 'w', 'g', 'r', 'b', 'y', 'y', 'o']
+#O = ['w', 'g', 'w', 'y', 'y', 'y', 'o', 'g']
+#R = ['b', 'w', 'w', 'b', 'b', 'o', 'g', 'r']
+#B = ['g', 'w', 'r', 'b', 'y', 'g', 'o', 'b']
+#W = ['r', 'r', 'y', 'o', 'g', 'y', 'r', 'g']
 
 
 # EDGES
@@ -64,28 +64,29 @@ def lookupEdge(arg1, arg2):
             return 17, 16
 
 
-edge = [0 for x in range(24)]
+def edgeAssign(Y, G, O, R, B, W):
+    edge = [0 for x in range(24)]
 
-edge[0], edge[1] = lookupEdge(Y[3], O[1])
-edge[2], edge[3] = lookupEdge(Y[7], R[1])
-edge[4], edge[5] = lookupEdge(Y[1], B[1])
-edge[6], edge[7] = lookupEdge(Y[5], G[1])
+    edge[0], edge[1] = lookupEdge(Y[3], O[1])
+    edge[2], edge[3] = lookupEdge(Y[7], R[1])
+    edge[4], edge[5] = lookupEdge(Y[1], B[1])
+    edge[6], edge[7] = lookupEdge(Y[5], G[1])
 
-edge[8], edge[9] = lookupEdge(B[7], O[3])
-edge[10], edge[11] = lookupEdge(O[7], G[3])
-edge[12], edge[13] = lookupEdge(G[7], R[3])
-edge[14], edge[15] = lookupEdge(R[7], B[3])
+    edge[8], edge[9] = lookupEdge(B[7], O[3])
+    edge[10], edge[11] = lookupEdge(O[7], G[3])
+    edge[12], edge[13] = lookupEdge(G[7], R[3])
+    edge[14], edge[15] = lookupEdge(R[7], B[3])
 
-edge[16], edge[17] = lookupEdge(W[3], O[5])
-edge[18], edge[19] = lookupEdge(W[7], R[5])
-edge[20], edge[21] = lookupEdge(W[5], B[5])
-edge[22], edge[23] = lookupEdge(W[1], G[5])
+    edge[16], edge[17] = lookupEdge(W[3], O[5])
+    edge[18], edge[19] = lookupEdge(W[7], R[5])
+    edge[20], edge[21] = lookupEdge(W[5], B[5])
+    edge[22], edge[23] = lookupEdge(W[1], G[5])
 
-print(edge)
+    print(edge)
+    return edge
 
 
 # Corners
-
 def lookupCorner(arg1, arg2):
     if arg1 == 'y':
         if arg2 == 'b':
@@ -142,17 +143,18 @@ def lookupCorner(arg1, arg2):
         elif arg2 == 'g':
             return 5, 4, 3
 
+def cornerAssign(Y, G, O, R, B, W):
+    corner = [0 for x in range(24)]
 
-corner = [0 for x in range(24)]
+    corner[0], corner[1], corner[2] = lookupCorner(Y[2], B[0])
+    corner[3], corner[4], corner[5] = lookupCorner(Y[4], O[0])
+    corner[6], corner[7], corner[8] = lookupCorner(Y[6], G[0])
+    corner[9], corner[10], corner[11] = lookupCorner(Y[0], R[0])
 
-corner[0], corner[1], corner[2] = lookupCorner(Y[2], B[0])
-corner[3], corner[4], corner[5] = lookupCorner(Y[4], O[0])
-corner[6], corner[7], corner[8] = lookupCorner(Y[6], G[0])
-corner[9], corner[10], corner[11] = lookupCorner(Y[0], R[0])
+    corner[12], corner[13], corner[14] = lookupCorner(W[4], O[4])
+    corner[15], corner[16], corner[17] = lookupCorner(W[2], G[4])
+    corner[18], corner[19], corner[20] = lookupCorner(W[0], R[4])
+    corner[20], corner[21], corner[23] = lookupCorner(W[6], B[4])
 
-corner[12], corner[13], corner[14] = lookupCorner(W[4], O[4])
-corner[15], corner[16], corner[17] = lookupCorner(W[2], G[4])
-corner[18], corner[19], corner[20] = lookupCorner(W[0], R[4])
-corner[20], corner[21], corner[23] = lookupCorner(W[6], B[4])
-
-print(corner)
+    print(corner)
+    return corner

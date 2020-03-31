@@ -1,9 +1,12 @@
-yellowArray = list()
-greenArray = list()
-redArray = list()
-orangeArray = list()
-blueArray = list()
-whiteArray = list()
+from test2 import cornerAssign, edgeAssign
+from solve import solveEdges, solveCorner
+
+yellowArray = ['w', 'b', 'r', 'w', 'o', 'r', 'o', 'o']
+greenArray = ['b', 'w', 'g', 'r', 'b', 'y', 'y', 'o']
+redArray = ['w', 'g', 'w', 'y', 'y', 'y', 'o', 'g']
+orangeArray = ['b', 'w', 'w', 'b', 'b', 'o', 'g', 'r']
+blueArray = ['g', 'w', 'r', 'b', 'y', 'g', 'o', 'b']
+whiteArray = ['r', 'r', 'y', 'o', 'g', 'y', 'r', 'g']
 
 
 print("Welcome to the rubik's solving bot!")
@@ -23,23 +26,23 @@ print("             | 7 | 6 | 5 |")
 print("              -----------")
 print("Imagine the cube folded out like in the diagram above.")
 
-while False:
-    inp = input("enter the yellow faces separated by a comma:   ")
+while False: # Change this to true when testing the whole thing
+    inp = input("enter the yellow faces separated by a space:   ")
     yellowArray = inp.split(' ')
 
-    inp = input("enter the green faces separated by a comma:    ")
+    inp = input("enter the green faces separated by a space:    ")
     greenArray = inp.split(' ')
 
-    inp = input("enter the red faces separated by a comma:      ")
+    inp = input("enter the red faces separated by a space:      ")
     redArray = inp.split(' ')
 
-    inp = input("enter the orange faces separated by a comma:   ")
+    inp = input("enter the orange faces separated by a space:   ")
     orangeArray = inp.split(' ')
 
-    inp = input("enter the blue faces separated by a comma:     ")
+    inp = input("enter the blue faces separated by a space:     ")
     blueArray = inp.split(' ')
 
-    inp = input("enter the white faces separated by a comma:    ")
+    inp = input("enter the white faces separated by a space:    ")
     whiteArray = inp.split(' ')
 
     print("              -----------")
@@ -60,5 +63,13 @@ while False:
     if inp == 'y' :
         break
 
-print('the solve will be here')
+
+edges = [0]*24
+edges = edgeAssign(yellowArray, greenArray, redArray, orangeArray, blueArray, whiteArray)
+
+corners = [0]*24
+corners = cornerAssign(yellowArray, greenArray, redArray, orangeArray, blueArray, whiteArray)
+
+solveEdges(edges)
+solveCorner(corners)
 
