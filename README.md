@@ -4,6 +4,7 @@ In this project I will try to eventually make a robot that:
 - Scans the cube
 - Output a sequence that will solve the cube
 - Preform the sequence of moves
+
 This project however is still in development stage.
 
 ## Solving Methods
@@ -20,4 +21,5 @@ The sequence to solve this set is: switch with position 2 then 1 then 3, 4 and f
 
 ## Development Progress
 Currently writing the solving code for the corners.
+
 Program can now correctly solve edges including parity.
