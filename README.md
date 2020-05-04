@@ -23,3 +23,5 @@ The sequence to solve this set is: switch with position 2 then 1 then 3, 4 and f
 Currently writing the solving code for the corners.
 
 Program can now correctly solve edges including parity.
+
+The robot is designed and build.
