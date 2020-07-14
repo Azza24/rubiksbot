@@ -73,3 +73,4 @@ corners = cornerAssign(yellowArray, greenArray, redArray, orangeArray, blueArray
 solveEdges(edges)
 solveCorner(corners)
 
+
